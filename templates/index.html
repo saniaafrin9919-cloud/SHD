@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Lender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Smart Lender - Loan Eligibility Prediction</h1>
+
+<form action="/predict" method="post">
+
+    Customer ID:
+    <input type="number" name="Customer_ID" required><br><br>
+
+    Gender:
+    <select name="Gender">
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+    </select><br><br>
+
+    Married:
+    <select name="Married">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br><br>
+
+    Dependents:
+    <input type="number" name="Dependents" required><br><br>
+
+    Education:
+    <select name="Education">
+        <option value="1">Graduate</option>
+        <option value="0">Not Graduate</option>
+    </select><br><br>
+
+    Self Employed:
+    <select name="Self_Employed">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br><br>
+
+    Applicant Income:
+    <input type="number" name="Applicant_Income" required><br><br>
+
+    Coapplicant Income:
+    <input type="number" name="Coapplicant_Income" required><br><br>
+
+    Loan Amount:
+    <input type="number" name="Loan_Amount" required><br><br>
+
+    Loan Amount Term:
+    <input type="number" name="Loan_Amount_Term" required><br><br>
+
+    Credit History:
+    <input type="number" name="Credit_History" required><br><br>
+
+    Property Area:
+    <select name="Property_Area">
+        <option value="0">Rural</option>
+        <option value="1">Semiurban</option>
+        <option value="2">Urban</option>
+    </select><br><br>
+
+    <input type="submit" value="Predict Loan Eligibility">
+
+</form>
+
+</body>
+</html>
